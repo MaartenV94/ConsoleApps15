@@ -1,11 +1,11 @@
 # C# Console Applications App01 to App05
 | Author | Details |
 | ---- | ---- |
-**Name**: | Student Name  |
-**Student ID**: | 12345678 |
-**Course:** | Computing |
-**Module**: | CO453     |
-**Started**: | January 2021 |    
+**Name**: | Maarten Vanderbeeken  |
+**Student ID**: | 21424839 |
+**Course:** | Computing and Web Development |
+**Module**: | CO453 - Application Programming |
+**Started**: | Febuary 2022 |    
 
 1. App01: Distance Converter
 2. App02: BMI Calculator
