@@ -1,10 +1,10 @@
 # C# Console Applications App01 to App05
 | Author | Details |
 | ---- | ---- |
-**Name**: | Maarten Vanderbeeken  |
+**Name**: | Maarten Vanderbeeken |
 **Student ID**: | 21424839 |
 **Course:** | Computing and Web Development |
-**Module**: | CO453 - Application Programming |
+**Module**: | CO453 - Application Programmin  |
 **Started**: | Febuary 2022 |    
 
 1. App01: Distance Converter
