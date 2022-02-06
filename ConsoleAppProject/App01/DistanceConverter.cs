@@ -1,4 +1,6 @@
-﻿namespace ConsoleAppProject.App01
+﻿using System;
+
+namespace ConsoleAppProject.App01
 {
     /// <summary>
     /// This app lets a user enter a unit of distance in miles
@@ -18,7 +20,9 @@
         /// </summary>
         public void Run()
         {
-
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
         }
         /// <summary>
         /// Promt the user to enter the distance in miles
@@ -26,7 +30,9 @@
         /// </summary>
         private void InputMiles()
         {
-
+            Console.Write("Please enter the number of miles > ");
+            string value = Console.ReadLine();
+            miles = Convert.ToDouble(value);
         }
 
         private void CalculateFeet()
