@@ -17,19 +17,18 @@ namespace ConsoleAppProject
     {
         public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.BackgroundColor = ConsoleColor.Gray;
-            
-            Console.WriteLine("BNU CO453 Applications Programming 2021-2022!");
-            Console.WriteLine("                App01                        ");
-            Console.WriteLine("         Distance Converter  >               ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.Black;
+
+            Console.WriteLine("                                                   ");
+            Console.WriteLine("   BNU CO453 Applications Programming 2021-2022!   ");
+            Console.WriteLine("                                                   ");
+            Console.WriteLine("                      App01                        ");
+            Console.WriteLine("                                                   ");
 
             DistanceConverter converter = new DistanceConverter();
 
-            converter.MilesToFeet();
-            converter.FeetToMiles();
-            converter.MilesToMeters();
+            converter.ConvertDistance();
         }
-
     }
 }
