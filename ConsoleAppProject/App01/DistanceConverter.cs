@@ -164,7 +164,7 @@ namespace ConsoleAppProject.App01
         private void OutputDistance()
         {
             Console.WriteLine($"\n {fromDistance} {fromUnit} =" +
-                $" {toDistance} {toUnit}!\n");
+                $" {toDistance} {toUnit}\n");
         }
     }
 }
