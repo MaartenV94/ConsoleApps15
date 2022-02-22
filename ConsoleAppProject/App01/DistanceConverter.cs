@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleAppProject.Helpers;
 
 namespace ConsoleAppProject.App01
 {
@@ -50,7 +51,7 @@ namespace ConsoleAppProject.App01
 
             Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
 
-            fromDistance = InputDistance($" Please enter the number of {fromUnit} > ");
+            fromDistance = ConsoleHelper.InputNumber($" Please enter the number of {fromUnit} > ");
 
             CalculateDistance();
 
@@ -77,7 +78,10 @@ namespace ConsoleAppProject.App01
             Console.WriteLine();
 
         }
-
+        /// <summary>
+        /// This method contains six calculations to convert between miles,
+        /// feet and meters.
+        /// </summary>
         private void CalculateDistance()
         {
             if (fromUnit == MILES && toUnit == FEET)
@@ -144,18 +148,6 @@ namespace ConsoleAppProject.App01
             Console.WriteLine(prompt);
             string choice = Console.ReadLine();
             return choice;
-        }
-
-        /// <summary>
-        /// This method promts the user to input a unit that they
-        /// wish to be converted and is displayed at the start of
-        /// each convertion with the Output heading class.
-        /// </summary>
-        private double InputDistance(string prompt)
-        {
-            Console.Write(prompt);
-            string value = Console.ReadLine();
-            return Convert.ToDouble(value);
         }
       
         /// <summary>
