@@ -9,7 +9,7 @@ namespace ConsoleAppProject.App01
     /// the conversion in another unit (toUnit).
     /// </summary>
     /// <author>
-    /// Maarten Vanderbeeken version 1.3
+    /// Maarten Vanderbeeken version 1.4
     /// </author>
     public class DistanceConverter
     {
@@ -51,7 +51,7 @@ namespace ConsoleAppProject.App01
 
             Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
 
-            fromDistance = ConsoleHelper.InputNumber($" Please enter the number of {fromUnit} > ");
+            fromDistance = ConsoleHelper.InputNumber($" Please enter the distance in {fromUnit} > ");
 
             CalculateDistance();
 
@@ -109,7 +109,9 @@ namespace ConsoleAppProject.App01
                 toDistance = fromDistance / FEET_IN_METERS;
             }
         }
-
+        /// <summary>
+        /// This method will display a set of choices for the user to select from.
+        /// </summary>
         private string SelectUnit(string prompt)
         {
             string choice = DisplayChoices(prompt);
@@ -119,8 +121,12 @@ namespace ConsoleAppProject.App01
             return unit;
         }
 
+        /// <summary>
+        /// This method executes the choice made by the user and returns either feet, meters or miles.
+        /// </summary>
         private static string ExecuteChoice(string choice)
         {
+
             if (choice.Equals("1"))
             {
                 return FEET;
@@ -137,6 +143,11 @@ namespace ConsoleAppProject.App01
             return null;
         }
 
+        /// <summary>
+        /// This method displays the choices that the user can pick from to type in.
+        /// </summary>
+        /// <param name="prompt"></param>
+        /// <returns></returns>
         private static string DisplayChoices(string prompt)
         {
             Console.WriteLine();

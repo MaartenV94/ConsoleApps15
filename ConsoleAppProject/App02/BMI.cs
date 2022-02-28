@@ -1,10 +1,13 @@
-﻿namespace ConsoleAppProject.App02
+﻿
+
+namespace ConsoleAppProject.App02
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// This application allows a user to calculate their
+    /// Body Mass Index using metric or imperial system.
     /// </summary>
     /// <author>
-    /// Student Name version 0.1
+    /// Tomás Pinto version 1.0
     /// </author>
     public class BMI
     {
