@@ -145,9 +145,7 @@ namespace ConsoleAppProject.App01
 
         /// <summary>
         /// This method displays the choices that the user can pick from to type in.
-        /// </summary>
-        /// <param name="prompt"></param>
-        /// <returns></returns>
+        /// </summary>  
         private static string DisplayChoices(string prompt)
         {
             Console.WriteLine();

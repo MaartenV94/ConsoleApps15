@@ -27,9 +27,27 @@ namespace ConsoleAppProject
             Console.WriteLine("                      App 01                       ");
             Console.WriteLine("                                                   ");
 
-            DistanceConverter app01 = new DistanceConverter();
+            string[] choices = new string[]
+            {
+                "Distance Converter",
+                "BMI Calculator"
+            };
 
-            app01.ConvertDistance();
+            ConsoleHelper.OutputTitle("Please select the App you would like to use > ");
+            int choice = ConsoleHelper.SelectChoice(choices);
+
+            if(choice == 1)
+            {
+                DistanceConverter app01 = new DistanceConverter();
+
+                app01.ConvertDistance();
+            }
+            else if(choice == 2)
+            {
+                BMI_Calculator app02 = new BMI_Calculator();
+                app02.Run();
+            }
+
         }
     }
 }
