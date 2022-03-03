@@ -11,7 +11,7 @@ namespace ConsoleAppProject.App02
     {
        None,
        Underwieght,
-       Normal,
+       Normalweight,
        Overwieght,
        ObeseI,
        ObeseII,

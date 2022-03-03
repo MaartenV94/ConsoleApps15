@@ -11,7 +11,7 @@ namespace ConsoleAppProject.Helpers
     /// There are methods for outputting a main heading
     /// and a title.
     /// <author>
-    /// Maarten Vanderbeeken Version 1.0.
+    /// Maarten Vanderbeeken Version 1.2
     /// </author>
     /// </summary>
     public static class ConsoleHelper
@@ -69,12 +69,25 @@ namespace ConsoleAppProject.Helpers
                 try
                 {
                     number = Convert.ToDouble(value);
-                    isValid = true;
+                    if (number > 0)
+                    {
+                        isValid = true;
+                    }
+
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nError! Number must be higher than 0\n");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        isValid = false;
+                    }
                 }
                 catch (Exception)
                 {
                     isValid = false;
-                    Console.WriteLine(" INVALID NUMBER!");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.WriteLine("\n INVALID NUMBER!\n");
                 }
 
             } while (!isValid);
@@ -102,12 +115,15 @@ namespace ConsoleAppProject.Helpers
 
                 if (number < min || number > max)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.BackgroundColor = ConsoleColor.Black;
                     isValid = false;
-                    Console.WriteLine($"Number must be between {min} and {max}");
-                }
+                    Console.WriteLine($"\nNumber must be between {min} and {max}\n");                }
                 else isValid = true;
 
             } while (!isValid);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.Black;
 
             return number;
 
@@ -124,17 +140,16 @@ namespace ConsoleAppProject.Helpers
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.BackgroundColor = ConsoleColor.Black;
 
-            Console.WriteLine("\n ---------------------------------");
-            Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Maarten Vanderbeeken        ");
-            Console.WriteLine(" ---------------------------------" +
-                "\n");
+            Console.WriteLine(" -------------------------------------------");
+            Console.WriteLine($"            {heading}              ");
+            Console.WriteLine("       by Maarten Vanderbeeken              ");
+            Console.WriteLine(" -------------------------------------------");
 
             Console.ForegroundColor = ConsoleColor.Yellow;
         }
 
         /// <summary>
-        /// This method will display a green title underlined
+        /// This method will display a yellow title underlined
         /// by dashes.
         /// </summary>
         public static void OutputTitle(string title)
@@ -142,7 +157,7 @@ namespace ConsoleAppProject.Helpers
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.BackgroundColor = ConsoleColor.Black;
 
-            Console.WriteLine($"\n {title}");
+            Console.WriteLine($"\n {title} ");
             Console.Write(" ");
 
             for(int count = 0; count <= title.Length; count++)
@@ -152,6 +167,42 @@ namespace ConsoleAppProject.Helpers
 
             Console.WriteLine("\n");
             Console.ResetColor();
+        }
+
+        /// <summary>
+        /// This method will give the user the option to carry
+        /// out another calculation by saying yes or no
+        /// </summary>
+        public static bool Repeat()
+        {
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.WriteLine("\n Would you like to carry out"
+                    + " another calculation? yes/no? > ");
+                string choice = Console.ReadLine();
+
+                if (choice.ToLower().Contains("y"))
+                {
+                    Console.WriteLine(" You have selected yes");
+                    repeat = false;
+                    return true;
+                }
+
+                else if (choice.ToLower().Contains("n"))
+                {
+                    Console.WriteLine(" You have selected no");
+                    repeat = false;
+                    return false;
+                }
+
+                else
+                {
+                    Console.WriteLine(" Error: invalid input. Please try again");
+                }
+            }
+            return false;
+
         }
     }
 }
