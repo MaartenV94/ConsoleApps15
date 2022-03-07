@@ -36,9 +36,9 @@ namespace ConsoleAppProject.App01
         public void Run()
         {
             bool repeat = true;
-            while (repeat)
+            while(repeat)
             {
-
+                
                 ConsoleHelper.OutputHeading("Distance Converter");
                 ConvertDistance();
                 repeat = ConsoleHelper.Repeat();
@@ -83,7 +83,7 @@ namespace ConsoleAppProject.App01
         /// This method contains six calculations to convert between miles,
         /// feet and meters.
         /// </summary>
-        public void CalculateDistance()
+        private void CalculateDistance()
         {
             if (fromUnit == MILES && toUnit == FEET)
             {
@@ -110,11 +110,11 @@ namespace ConsoleAppProject.App01
                 toDistance = fromDistance / FEET_IN_METERS;
             }
         }
-
+      
         /// <summary>
         /// This method outputs a result of the converted number.
         /// </summary>
-        public void OutputDistance()
+        private void OutputDistance()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.BackgroundColor = ConsoleColor.Black;

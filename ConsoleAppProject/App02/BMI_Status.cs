@@ -9,12 +9,12 @@ namespace ConsoleAppProject.App02
     /// </author>
     public enum BMI_Status
     {
-        None,
-        Underwieght,
-        Normalweight,
-        Overwieght,
-        ObeseI,
-        ObeseII,
-        ObeseIII,
+       None,
+       Underwieght,
+       Normalweight,
+       Overwieght,
+       ObeseI,
+       ObeseII,
+       ObeseIII,
     }
 }
