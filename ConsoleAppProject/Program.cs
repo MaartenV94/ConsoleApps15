@@ -12,7 +12,7 @@ namespace ConsoleAppProject
     /// to start Apps 01 to 05 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Maarten Vanderbeeken 04/01/2022
+    /// Maarten Vanderbeeken 03/03/2022
     /// </summary>
     public static class Program
     {
@@ -24,7 +24,7 @@ namespace ConsoleAppProject
             Console.WriteLine("                                                   ");
             Console.WriteLine("   BNU CO453 Applications Programming 2021-2022!   ");
             Console.WriteLine("                                                   ");
-            Console.WriteLine("                      App 01                       ");
+            Console.WriteLine("              By Maarten Vanderbeeken              ");
             Console.WriteLine("                                                   ");
 
             string[] choices = new string[]
@@ -33,16 +33,16 @@ namespace ConsoleAppProject
                 "BMI Calculator"
             };
 
-            ConsoleHelper.OutputTitle("Please select the App you would like to use > ");
+            ConsoleHelper.OutputTitle(" Please select the App you would like to use >   ");
             int choice = ConsoleHelper.SelectChoice(choices);
 
-            if(choice == 1)
+            if (choice == 1)
             {
                 DistanceConverter app01 = new DistanceConverter();
 
-                app01.ConvertDistance();
+                app01.Run();
             }
-            else if(choice == 2)
+            else if (choice == 2)
             {
                 BMI_Calculator app02 = new BMI_Calculator();
                 app02.Run();
