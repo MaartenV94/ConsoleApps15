@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleAppProject.App01;
 
 namespace ConsoleAppTest
 {
-    [TestClass]
+   // [TestClass]
 
     public class App01Test
     {
