@@ -141,8 +141,8 @@ namespace ConsoleAppProject.Helpers
             Console.BackgroundColor = ConsoleColor.Black;
 
             Console.WriteLine(" -------------------------------------------");
-            Console.WriteLine($"            {heading}              ");
-            Console.WriteLine("       by Maarten Vanderbeeken              ");
+            Console.WriteLine($"            {heading}          ");
+            Console.WriteLine("         by Maarten Vanderbeeken            ");
             Console.WriteLine(" -------------------------------------------");
 
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -178,6 +178,9 @@ namespace ConsoleAppProject.Helpers
             bool repeat = true;
             while (repeat)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.BackgroundColor = ConsoleColor.Black;
+
                 Console.WriteLine("\n Would you like to carry out"
                     + " another calculation? yes/no? > ");
                 string choice = Console.ReadLine();

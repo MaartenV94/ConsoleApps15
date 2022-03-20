@@ -11,6 +11,9 @@ namespace ConsoleAppProject.App03
     /// </summary>
     public enum Grades
     {
+        [Display(Name = "Invalid")]
+        [Description("Invalid Grade")]
+        X,
         [Display(Name = "Fail")]
         [Description("Referred")]
         F,
