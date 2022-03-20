@@ -4,7 +4,7 @@ using ConsoleAppProject.App03;
 namespace ConsoleApp.Tests
 {
     [TestClass]
-    public class App03Test
+    public class App03Tests
     {
         private StudentGrades
             converter = new StudentGrades();
